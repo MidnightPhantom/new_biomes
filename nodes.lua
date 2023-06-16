@@ -45,10 +45,50 @@ minetest.register_node("new_biomes:medium_pine", {
 	walkable = false,
 	buildable_to = true,
                 light_source = 10,
-	groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1, underground_plantlife = 1},
+	groups = {snappy = 3, flora = 1, attached_node = 1,  underground_plantlife = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
+})
+
+minetest.register_node("new_biomes:glowing_sand",{
+               description = "Glowing Sand",
+               tiles = {"default_sand.png"},
+               groups = {falling_node = 1, crumbly = 1, sand = 1},
+               light_source = 10,
+               sounds = default.node_sound_snow_defaults(),
+})
+
+minetest.register_node("new_biomes:glowing_sandstone", {
+               description = "Glowing Sandstone",
+               tiles = {"default_sandstone.png"},
+               groups = {crumbly = 1, cracky = 3},
+               light_source = 10,
+               sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("new_biomes:glowing_snowblock", {
+               description = "Glowing Snow  Block",
+               tiles = {"default_snow.png"},
+               groups = {crumbly = 3, underground_snow = 1},
+               sounds = default.node_sound_snow_defaults(),
+               light_source = 10,
+
+               on_construct = function(pos)
+		pos.y = pos.y - 1
+		if minetest.get_node(pos).name == "new_biomes:gdwg" then
+			minetest.set_node(pos, {name = "new_biomes:gdws"})
+		end
+	end,
+})
+
+minetest.register_node("new_biomes:glowing_ice", {
+               description = "Glowing Ice",
+               tiles = {"default_ice.png"},
+               paramtype = "light",
+               groups = {cracky = 3, slippery = 1},
+               light_source = 10,
+               sounds = default.node_sound_ice_defaults(),
 })
