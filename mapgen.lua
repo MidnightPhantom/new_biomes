@@ -1,6 +1,7 @@
 minetest.register_biome({
                name = "underground_grassland",
                node_stone = "new_biomes:glowing_dirt",
+               node_cave_liquid = {"default:river_water_source"},
                node_dungeon = "new_biomes:glowing_dirt",
                node_dungeon_stair = "new_biomes:gdwg",
                 y_max= -29000,
@@ -11,7 +12,7 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:sgrassland_floor",
+                                name = "new_biomes:grassland_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
@@ -24,15 +25,29 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+minetest.register_decoration({
+		name = "default:bush",
+		deco_type = "schematic",
+		place_on = {"new_biomes:gdws"},
+		sidelen = 16,
+                                fill_ratio = 0.1,
+		biomes = {"underground_grassland"},
+		y_max =-29000,
+		y_min = -30910,
+		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
+		flags = "all_floors, force_placement, place_center_x, place_center_z",
+	})
+
 minetest.register_biome({
                name = "underground_sandstone_desert",
                node_stone = "new_biomes:glowing_sandstone",
                node_dungeon = "new_biomes:glowing_sandstone",
                node_dungeon_stair = "default:sandstone",
+               node_cave_liquid = {"default:lava_source"},
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 73,
+               heat_point = 103,
                humidity_point = 0,
 })
 
@@ -50,16 +65,57 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+
+minetest.register_biome({
+               name = "underground_desert",
+               node_stone = "new_biomes:glowing_desert_sandstone",
+               node_dungeon = "new_biomes:glowing_desert_sandstone",
+               node_dungeon_stair = "default:sandstone",
+               y_max = -29000,
+               y_min = -30912,
+               vertical_blend = 10,
+               heat_point = 90,
+               humidity_point = 0,
+})
+
+minetest.register_decoration({
+                                name = "new_biomes:desert_floor",
+		deco_type = "simple",
+		place_on = {"new_biomes:glowing_desert_sandstone"},
+		sidelen = 16,
+                                fill_ratio = 10,
+		biomes = {"underground_desert"},
+		y_max = -29000,
+		y_min = -30910,
+		decoration = "new_biomes:glowing_desert_sand",
+		place_offset = -1,
+		flags = "all_floors,force_placement",
+})
+
+minetest.register_decoration({
+                                name = "new_biomes:desert_roof",
+		deco_type = "simple",
+		place_on = {"new_biomes:glowing_desert_sandstone"},
+		sidelen = 16,
+                                fill_ratio = 10,
+		biomes = {"underground_desert"},
+		y_max = -29000,
+		y_min = -30910,
+		decoration = "new_biomes:glowing_desert_stone",
+		flags = "all_ceilings",
+})
+
 minetest.register_biome({
                name = "underground_snowy_grassland",
                node_stone = "new_biomes:glowing_dirt",
                node_dungeon = "new_biomes:glowing_dirt",
                node_dungeon_stair = "new_biomes:gdws",
+               node_cave_liquid = {"default:river_water_source"},
                 y_max= -29000,
                 y_min = -31000,
                 vertical_blend = 10,
-                heat_point = 0,
-                humidity_point = 65,
+                heat_point = 20,
+                humidity_point = 55,
 })
 
 minetest.register_decoration({
@@ -80,13 +136,13 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:gdws"},
 		sidelen = 16,
-                                fill_ratio = 0.9,
+                                fill_ratio = 0.2,
 		biomes = {"underground_snowy_grassland"},
 		y_max = -29000,
 		y_min = -30910,
 		decoration = "new_biomes:medium_pine",
 		place_offset = 0,
-		flags = "force_placement",
+		flags = "all_floors, force_placement",
 })
 
 minetest.register_biome({
@@ -98,7 +154,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 70,
+                humidity_point = 30,
 })
 
 minetest.register_decoration({
