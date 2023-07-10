@@ -74,7 +74,7 @@ minetest.register_node("new_biomes:glowing_desert_sand",{
                tiles = {"default_desert_sand.png"},
                groups = {falling_node = 1, crumbly = 1, sand = 1},
                light_source = 10,
-               sounds = default.node_sound_snow_defaults(),
+               sounds = default.node_sound_sand_defaults(),
 })
 
 minetest.register_node("new_biomes:glowing_desert_sandstone", {
@@ -98,6 +98,22 @@ minetest.register_node("new_biomes:glowing_desert_cobble", {
                description = "Glowing Desert Cobblestone",
                tiles = {"default_desert_cobble.png"},
                groups = {cracky = 3, stone =2},
+               light_source = 10,
+               sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("new_biomes:glowing_silver_sand",{
+               description = "Silver Sand",
+               tiles = {"default_silver_sand.png"},
+               groups = {falling_node = 1, crumbly = 1, sand = 1},
+               light_source = 10,
+               sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("new_biomes:glowing_silver_sandstone", {
+               description = "Glowing Silver Sandstone",
+               tiles = {"default_silver_sandstone.png"},
+               groups = {crumbly = 1, cracky = 3},
                light_source = 10,
                sounds = default.node_sound_stone_defaults(),
 })
