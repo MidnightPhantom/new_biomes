@@ -12,11 +12,11 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:grassland_floor",
+                name = "new_biomes:grassland_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
-                                fill_ratio = 10,
+                fill_ratio = 10,
 		biomes = {"underground_grassland"},
 		y_max = -29000,
 		y_min = -30910,
@@ -39,11 +39,11 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:sdesert_floor",
+                name = "new_biomes:sdesert_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_sandstone"},
 		sidelen = 16,
-                                fill_ratio = 10,
+		fill_ratio = 10,
 		biomes = {"underground_sandstone_desert"},
 		y_max = -29000,
 		y_min = -30910,
@@ -66,11 +66,11 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:desert_floor",
+                name = "new_biomes:desert_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_desert_sandstone"},
 		sidelen = 16,
-                                fill_ratio = 10,
+                fill_ratio = 10,
 		biomes = {"underground_desert"},
 		y_max = -29000,
 		y_min = -30910,
@@ -80,11 +80,11 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:desert_roof",
+                name = "new_biomes:desert_roof",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_desert_sandstone"},
 		sidelen = 16,
-                                fill_ratio = 10,
+                fill_ratio = 10,
 		biomes = {"underground_desert"},
 		y_max = -29000,
 		y_min = -30910,
@@ -158,11 +158,11 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:glacier_floor",
+                name = "new_biomes:glacier_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_ice"},
 		sidelen = 16,
-                                fill_ratio = 10,
+                fill_ratio = 10,
 		biomes = {"underground_glacier"},
 		y_max = -29000,
 		y_min = -30910,
