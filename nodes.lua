@@ -102,6 +102,36 @@ minetest.register_node("new_biomes:glowing_desert_cobble", {
                sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("new_biomes:glowing_permafrost",{
+                description = "Glowing Permafrost",
+                tiles = {"default_permafrost.png"},
+                groups = {cracky = 2, unbreakable_by_hand=1},
+                light_source = 10,
+                sounds = default.node_sound_dirt_defaults(),
+})
+
+minetest.register_node("new_biomes:gpws", {
+	description = "Glowing Permafrost with Stones",
+	tiles = {"default_permafrost.png^default_stones.png",
+		"default_permafrost.png",
+		"default_permafrost.png^default_stones_side.png"},
+	groups = {cracky = 3},
+                light_source = 10,
+	sounds = default.node_sound_gravel_defaults(),
+})
+
+minetest.register_node("new_biomes:gpwm", {
+	description = "Glowing Permafrost with Moss",
+	tiles = {"default_moss.png", "default_permafrost.png",
+		{name = "default_permafrost.png^default_moss_side.png",
+			tileable_vertical = false}},
+	groups = {cracky = 3},
+                light_source = 10,
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name = "default_grass_footstep", gain = 0.25},
+	}),
+})
+
 minetest.register_node("new_biomes:glowing_snowblock", {
                description = "Glowing Snow  Block",
                tiles = {"default_snow.png"},
