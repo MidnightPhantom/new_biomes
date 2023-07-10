@@ -25,19 +25,6 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
-minetest.register_decoration({
-		name = "default:bush",
-		deco_type = "schematic",
-		place_on = {"new_biomes:gdws"},
-		sidelen = 16,
-                                fill_ratio = 0.1,
-		biomes = {"underground_grassland"},
-		y_max =-29000,
-		y_min = -30910,
-		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
-		flags = "all_floors, force_placement, place_center_x, place_center_z",
-	})
-
 minetest.register_biome({
                name = "underground_sandstone_desert",
                node_stone = "new_biomes:glowing_sandstone",
@@ -119,11 +106,11 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
-                                name = "new_biomes:snowy_grassland_floor",
+                name = "new_biomes:snowy_grassland_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
-                                fill_ratio = 10,
+                fill_ratio = 10,
 		biomes = {"underground_snowy_grassland"},
 		y_max = -29000,
 		y_min = -30910,
@@ -132,17 +119,30 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+minetest.register_biome({
+               name = "underground_tundra_with_permafrost",
+               node_stone = "new_biomes:glowing_permafrost",
+               node_dungeon = "new_biomes:glowing_permafrost",
+               node_dungeon_stair = "new_biomes:gpws",
+               vertical_blend = 10,
+                y_max= -29000,
+                y_min = -31000,
+                heat_point = 0,
+                humidity_point = 55,
+})
+
 minetest.register_decoration({
+                name = "new_biomes:tundra_floor",
 		deco_type = "simple",
-		place_on = {"new_biomes:gdws"},
+		place_on = {"new_biomes:glowing_permafrost"},
 		sidelen = 16,
-                                fill_ratio = 0.2,
-		biomes = {"underground_snowy_grassland"},
+                fill_ratio = 10,
+		biomes = {"underground_tundra_with_permafrost"},
 		y_max = -29000,
 		y_min = -30910,
-		decoration = "new_biomes:medium_pine",
-		place_offset = 0,
-		flags = "all_floors, force_placement",
+		decoration = {"new_biomes:gpwm", "new_biomes:gpws"},
+		place_offset = -1,
+		flags = "all_floors,force_placement",
 })
 
 minetest.register_biome({
