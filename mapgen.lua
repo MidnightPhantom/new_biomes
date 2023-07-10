@@ -1,3 +1,4 @@
+-- Grassland
 minetest.register_biome({
                name = "underground_grassland",
                node_stone = "new_biomes:glowing_dirt",
@@ -25,6 +26,7 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+--Sandstone Desert
 minetest.register_biome({
                name = "underground_sandstone_desert",
                node_stone = "new_biomes:glowing_sandstone",
@@ -52,7 +54,7 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
-
+--Desert
 minetest.register_biome({
                name = "underground_desert",
                node_stone = "new_biomes:glowing_desert_sandstone",
@@ -92,6 +94,34 @@ minetest.register_decoration({
 		flags = "all_ceilings",
 })
 
+--Cold Desert
+minetest.register_biome({
+               name = "underground_cold_desert",
+               node_stone = "new_biomes:glowing_silver_sandstone",
+               node_dungeon = "new_biomes:glowing_silver_sandstone",
+               node_dungeon_stair = "default:sandstone",
+               y_max = -29000,
+               y_min = -30912,
+               vertical_blend = 10,
+               heat_point = 10,
+               humidity_point = 0,
+})
+
+minetest.register_decoration({
+                name = "new_biomes:cold_desert_floor",
+		deco_type = "simple",
+		place_on = {"new_biomes:glowing_silver_sandstone"},
+		sidelen = 16,
+                fill_ratio = 10,
+		biomes = {"underground_cold_desert"},
+		y_max = -29000,
+		y_min = -30910,
+		decoration = "new_biomes:glowing_silver_sand",
+		place_offset = -1,
+		flags = "all_floors,force_placement",
+})
+
+--Snowy Grassland
 minetest.register_biome({
                name = "underground_snowy_grassland",
                node_stone = "new_biomes:glowing_dirt",
@@ -119,6 +149,7 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+--Permafrost Tundra
 minetest.register_biome({
                name = "underground_tundra_with_permafrost",
                node_stone = "new_biomes:glowing_permafrost",
@@ -145,6 +176,7 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+--Glacier
 minetest.register_biome({
                name = "underground_glacier",
                node_stone = "new_biomes:glowing_ice",
