@@ -8,7 +8,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 vertical_blend = 10,
-                heat_point = 47,
+                heat_point = 57,
                 humidity_point = 50,
 })
 
@@ -17,7 +17,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
-                fill_ratio = 10,
+                                fill_ratio = 10,
 		biomes = {"underground_grassland"},
 		y_max = -29000,
 		y_min = -30910,
@@ -36,7 +36,7 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 103,
+               heat_point = 90,
                humidity_point = 0,
 })
 
@@ -63,7 +63,7 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 90,
+               heat_point = 93,
                humidity_point = 0,
 })
 
@@ -72,7 +72,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_desert_sandstone"},
 		sidelen = 16,
-                fill_ratio = 10,
+                                fill_ratio = 10,
 		biomes = {"underground_desert"},
 		y_max = -29000,
 		y_min = -30910,
@@ -103,7 +103,7 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 10,
+               heat_point = 45,
                humidity_point = 0,
 })
 
@@ -159,7 +159,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 55,
+                humidity_point = 30,
 })
 
 minetest.register_decoration({
@@ -186,7 +186,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 30,
+                humidity_point = 20,
 })
 
 minetest.register_decoration({
