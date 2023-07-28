@@ -103,7 +103,7 @@ minetest.register_node("new_biomes:glowing_desert_cobble", {
 })
 
 minetest.register_node("new_biomes:glowing_silver_sand",{
-               description = "Silver Sand",
+               description = "Glowing Silver Sand",
                tiles = {"default_silver_sand.png"},
                groups = {falling_node = 1, crumbly = 1, sand = 1},
                light_source = 10,
