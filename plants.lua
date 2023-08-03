@@ -2,7 +2,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:gdws"},
 		sidelen = 16,
-                                fill_ratio = 0.2,
+                fill_ratio = 0.1,
 		biomes = {"underground_snowy_grassland"},
 		y_max = -29000,
 		y_min = -30910,
@@ -55,3 +55,58 @@ minetest.register_decoration({
 		flags = "place_center_x, place_center_z, all_floors, force_placement",
 })
 
+minetest.register_decoration({
+		name = "underground_mese_pillars",
+		deco_type = "schematic",
+		place_on = {"new_biomes:gpwm", "new_biomes:gpws"},
+		sidelen = 16,
+                fill_ratio = 0.01,
+	        place_offset = -1,
+		biomes = {"underground_tundra_with_permafrost"},
+		y_max = -29500,
+		y_min = -30900,
+		schematic = minetest.get_modpath("new_biomes") .. "/schematics/mese_oredec.mts",
+		flags = "place_center_x, place_center_z, all_floors, force_placement",
+})
+
+minetest.register_decoration({
+		name = "underground_copper_piles",
+		deco_type = "schematic",
+		place_on = {"new_biomes:glowing_silver_sand"},
+		sidelen = 16,
+                fill_ratio = 0.01,
+	        place_offset = -1,
+		biomes = {"underground_cold_desert"},
+		y_max = -29500,
+		y_min = -30900,
+		schematic = minetest.get_modpath("new_biomes") .. "/schematics/copper_oredec.mts",
+		flags = "place_center_x, place_center_z, all_floors, force_placement",
+})
+
+minetest.register_decoration({
+		name = "underground_tin_piles",
+		deco_type = "schematic",
+		place_on = {"new_biomes:gdwg"},
+		sidelen = 16,
+                fill_ratio = 0.01,
+	        place_offset = -1,
+		biomes = {"underground_grassland"},
+		y_max = -29500,
+		y_min = -30900,
+		schematic = minetest.get_modpath("new_biomes") .. "/schematics/tin_oredec.mts",
+		flags = "place_center_x, place_center_z, all_floors, force_placement",
+})
+
+minetest.register_decoration({
+		name = "underground_iron_piles",
+		deco_type = "schematic",
+		place_on = {"new_biomes:gdws"},
+		sidelen = 16,
+                fill_ratio = 0.01,
+	        place_offset = -1,
+		biomes = {"underground_snowy_grassland"},
+		y_max = -29500,
+		y_min = -30900,
+		schematic = minetest.get_modpath("new_biomes") .. "/schematics/iron_oredec.mts",
+		flags = "place_center_x, place_center_z, all_floors, force_placement",
+})
