@@ -2,7 +2,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:gdws"},
 		sidelen = 16,
-                fill_ratio = 0.1,
+                fill_ratio = 0.01,
 		biomes = {"underground_snowy_grassland"},
 		y_max = -29000,
 		y_min = -30910,
