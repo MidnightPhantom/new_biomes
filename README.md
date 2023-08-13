@@ -7,3 +7,5 @@ about any falling block falling in the void. And most of all you can now find or
 2. Add more plants
 3. More Biomes
 4. Nicely spread biomes
+5. A special layer of ore biomes
+6. Ore crops in the biomes
