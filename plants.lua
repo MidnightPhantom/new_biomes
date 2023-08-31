@@ -2,7 +2,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"new_biomes:gdws"},
 		sidelen = 16,
-                fill_ratio = 0.01,
+                                fill_ratio = 0.01,
 		biomes = {"underground_snowy_grassland"},
 		y_max = -29000,
 		y_min = -30910,
@@ -10,6 +10,23 @@ minetest.register_decoration({
 		place_offset = 0,
 		flags = "all_floors, force_placement",
 })
+
+--Trees
+
+minetest.register_decoration({
+		name = "glowing_apple_tree",
+		deco_type = "schematic",
+		place_on = {"new_biomes:gdwg"},
+		sidelen = 16,
+		fill_ratio = 0.08,
+                                place_offset = 0,
+		biomes = {"underground_deciduous_forest"},
+		y_max = -29000,
+		y_min = -30900,
+		schematic = minetest.get_modpath("new_biomes") .. "/schematics/apple_tree.mts",
+		flags = "place_center_x, place_center_z, force_placement, all_floors",
+		rotation = "random",
+	})
 
 --Decorations
 
