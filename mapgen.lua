@@ -9,7 +9,21 @@ minetest.register_biome({
                 y_min = -31000,
                 vertical_blend = 10,
                 heat_point = 57,
-                humidity_point = 50,
+                humidity_point = 40,
+})
+
+--Deciduous Forest
+minetest.register_biome({
+               name = "underground_deciduous_forest",
+               node_stone = "new_biomes:glowing_dirt",
+               node_dungeon = "new_biomes:glowing_dirt",
+               node_dungeon_stair = "default:dirt",
+               node_cave_liquid = {"default:river_water_source"},
+               vertical_blend = 10,
+               y_min = -31000,
+               y_max = -29000,
+               heat_point = 60,
+               humidity_point = 62,
 })
 
 minetest.register_decoration({
@@ -18,14 +32,14 @@ minetest.register_decoration({
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
                                 fill_ratio = 10,
-		biomes = {"underground_grassland"},
+		biomes = {"underground_grassland", "underground_deciduous_forest"},
 		y_max = -29000,
 		y_min = -30910,
 		decoration = "new_biomes:gdwg",
 		place_offset = -1,
 		flags = "all_floors,force_placement",
 })
-
+               
 --Sandstone Desert
 minetest.register_biome({
                name = "underground_sandstone_desert",
@@ -132,7 +146,7 @@ minetest.register_biome({
                 y_min = -31000,
                 vertical_blend = 10,
                 heat_point = 20,
-                humidity_point = 55,
+                humidity_point = 40,
 })
 
 minetest.register_decoration({
@@ -159,7 +173,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 30,
+                humidity_point = 40,
 })
 
 minetest.register_decoration({
@@ -186,7 +200,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 20,
+                humidity_point = 79,
 })
 
 minetest.register_decoration({
