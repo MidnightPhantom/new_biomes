@@ -1,3 +1,98 @@
+minetest.register_node("new_biomes:glowing_leaves", {
+               description = "Glowing Apple Tree Leaves",
+               drawtype = "allfaces_optional",
+               waving = 1,
+               tiles = {"default_leaves.png"},
+               special_tiles = {"default_leaves_simple.png"},
+               paramtype = "light",
+               is_ground_content = false,
+               groups = {leafdecay = 1,leaves = 1, snappy = 3, glowing_leaves = 1},
+               drop = {
+                              max_items = 1,
+                              items = {
+                                             {
+                                                items = {"default:sapling"},
+                                                rarity = 10,
+                                             },
+                                             {
+                                                 items = {"new_biomes:glowing_leaves"},
+                                              }
+                                           }
+               },
+              sounds = default.node_sound_leaves_defaults(),
+              light_source = 10,
+              after_place_node = after_place_leaves,
+})
+
+minetest.register_node("new_biomes:glowing_aspen_leaves", {
+               description = "Glowing Aspen Tree Leaves",
+               drawtype = "allfaces_optional",
+               waving = 1,
+               tiles = {"default_aspen_leaves.png"},
+               paramtype = "light",
+               is_ground_content = false,
+               groups = {leafdecay = 1,leaves = 1, snappy = 3, glowing_leaves = 1},
+               drop = {
+                              max_items = 1,
+                              items = {
+                                             {
+                                                items = {"default:aspen_sapling"},
+                                                rarity = 10,
+                                             },
+                                             {
+                                                 items = {"new_biomes:glowing_aspen_leaves"},
+                                              }
+                                           }
+               },
+              sounds = default.node_sound_leaves_defaults(),
+              light_source = 10,
+              after_place_node = after_place_leaves,
+})
+
+minetest.register_node("new_biomes:glowing_trunk", {
+               description = "Glowing Apple Tree Trunk",
+               tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
+               paramtype2 = "facedir",
+               is_ground_content = false,
+               groups = {choppy = 2, oddly_breakable_by_hand = 1, tree = 1, glowing_tree = 1},
+               sounds = default.node_sound_wood_defaults(),
+               on_place = minetest.rotate_node,
+               light_source = 10,
+})
+
+minetest.register_node("new_biomes:aspen_trunk", {
+	description = "Glowing Aspen Tree",
+	tiles = {"default_aspen_tree_top.png", "default_aspen_tree_top.png","default_aspen_tree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1},
+	sounds = default.node_sound_wood_defaults(),
+                light_source = 10,
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("new_biomes:glowing_wood", {
+	description = "Glowing Apple Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"default_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+                light_source = 10,
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("new_biomes:glowing_aspen_wood", {
+	description = "Glowing Aspen Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"default_aspen_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+                light_source = 10,
+	sounds = default.node_sound_wood_defaults(),
+})
+
 minetest.register_node("new_biomes:glowing_dirt",{
     description = "Glowing dirt",
     tiles = {"default_dirt.png"},

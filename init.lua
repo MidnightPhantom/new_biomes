@@ -5,3 +5,4 @@ dofile (modpath.. "/functions.lua");
 dofile (modpath.. "/mapgen.lua");
 dofile (modpath.. "/nodes.lua");
 dofile (modpath.. "/plants.lua");
+dofile (modpath.. "/crafts.lua");
