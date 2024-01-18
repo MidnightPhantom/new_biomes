@@ -10,7 +10,7 @@ minetest.register_abm({
                   "group:grass",
                   "default:snow",
     },
-    interval = 5,
+    interval = 3,
     chance = 50,
     catch_up = false,
     action = function(pos,node)
@@ -47,7 +47,7 @@ minetest.register_abm({
 minetest.register_abm({
                label = "Grass Covered",
                nodenames = {"group:spreading_glow_dirt_type"},
-               interval = 8,
+               interval = 3,
                chance = 50,
                catch_up = false,
                action = function(pos, node)
@@ -65,7 +65,46 @@ minetest.register_abm({
                                end
               end
 })
+
+--
+--Bonus Function to eradicate falling nodes
+--
  
+minetest.register_abm({
+               label = "AntiFall",
+               nodenames = {"default:gravel"},
+               neighbours = {
+                                      "air",
+                                      "group:grass",
+                                      "default:snow",
+                                    },
+                interval = 5,
+                chance = 50,
+                catch_up = false,
+                action = function(pos,node)
+                              -- Checks for low light levels or a node above
+                              -- Returns of ignore above
+                              local above = { x = pos.x, y = pos.y+1, z=pos.z}
+                              if(minetest.get_node_light(above) or 0) <3 then
+                                 return
+                              end      
+                              -- Looks for barren_to_fertile neighbours
+                              local p2 = minetest.find_node_near(pos, 1, "group:barren_to_fertile")
+                              if p2 then
+                                  local n3 = minetest.get_node(p2)
+                                  minetest.set_node(pos, {name = n3.name})    
+                                  return
+                              end
+             
+                             --Else,any seeding nodes on top
+                             local name = minetest.get_node(above).name
+                             -- Snow check is cheapest hence first
+                             if name == "default:snow" then
+                                 minetest.set_node(pos,{name = "new_biomes:glowing_dirt"})
+                             end
+              end
+})
+
 --
 -- For removing underground decorations if there is a block above them
 --This function is not needed anymore but still kept

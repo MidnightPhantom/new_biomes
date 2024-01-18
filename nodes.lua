@@ -96,7 +96,7 @@ minetest.register_node("new_biomes:glowing_aspen_wood", {
 minetest.register_node("new_biomes:glowing_dirt",{
     description = "Glowing dirt",
     tiles = {"default_dirt.png"},
-    groups = {crumbly = 3, soil = 1},
+    groups = {crumbly = 3, soil = 1, barren_to_fertile=1},
     sounds= default.node_sound_dirt_defaults(),
     light_source = 10,
 })
