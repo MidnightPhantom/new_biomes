@@ -114,6 +114,22 @@ minetest.register_node("new_biomes:gdwg", {
 	}),
 })
 
+minetest.register_node("new_biomes:dwrl", {
+	description = "Glowing Dirt with Rainforest Litter",
+	tiles = {
+		"default_rainforest_litter.png",
+		"default_dirt.png",
+		{name = "default_dirt.png^default_rainforest_litter_side.png",
+			tileable_vertical = false}
+	},
+                light_source = 14,
+	groups = {crumbly = 3, soil = 1, spreading_glow_dirt_type = 1},
+	drop = "default:dirt",
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name = "default_grass_footstep", gain = 0.4},
+	}),
+})
+
 minetest.register_node("new_biomes:gdws", {
 	description = "Glowing Dirt with Snow",
 	tiles = {"default_snow.png", "default_dirt.png",
@@ -135,6 +151,27 @@ minetest.register_node("new_biomes:medium_pine", {
 	tiles = {"new_biomes_pine.png"},
 	inventory_image = "new_biomes_pine.png",
 	wield_image = "new_biomes_pine.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+                light_source = 10,
+	groups = {snappy = 3, flora = 1, attached_node = 1,  underground_plantlife = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
+	},
+})
+
+minetest.register_node("new_biomes:bush_1", {
+	description = "Underground Bush 1",
+	drawtype = "plantlike",
+	waving = 1,
+	visual_scale = 0.9,
+	tiles = {"bush_1.png"},
+	inventory_image = "bush_1.png",
+	wield_image = "bush_1.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,

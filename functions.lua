@@ -11,7 +11,7 @@ minetest.register_abm({
                   "default:snow",
     },
     interval = 3,
-    chance = 50,
+    chance = 80,
     catch_up = false,
     action = function(pos,node)
              -- Checks for low light levels or a node above
@@ -72,14 +72,14 @@ minetest.register_abm({
  
 minetest.register_abm({
                label = "AntiFall",
-               nodenames = {"default:gravel"},
+               nodenames = {"default:gravel", "default:silver_sand"},
                neighbours = {
                                       "air",
                                       "group:grass",
                                       "default:snow",
                                     },
                 interval = 5,
-                chance = 50,
+                chance = 90,
                 catch_up = false,
                 action = function(pos,node)
                               -- Checks for low light levels or a node above
